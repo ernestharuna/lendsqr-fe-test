@@ -6,6 +6,7 @@ import Root from "../layouts/root";
 import Dashboard from "./dashboard";
 import Index from "./users";
 import Login from "./login";
+import User from "./users/user";
 
 const router = createBrowserRouter([
     {
@@ -20,7 +21,11 @@ const router = createBrowserRouter([
             {
                 path: "users",
                 element: <Index />
-            }
+            },
+            {
+                path: "users/:userId",
+                element: <User />
+            },
         ]
     }
 ])
