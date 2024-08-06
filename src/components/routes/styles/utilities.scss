@@ -1,0 +1,148 @@
+@import "font-face";
+
+$breakpoints: (
+    small: 540px,
+    medium: 720px,
+    large: 960px,
+    xlarge: 1140px,
+    xxlarge: 1320px
+);
+
+$spacing-values: (
+    0: 0,
+    1: 4px,
+    2: 8px,
+    3: 12px,
+    4: 16px,
+    5: 20px,
+    6: 24px,
+    7: 28px,
+    8: 32px,
+    9: 36px,
+    10: 40px,
+    11: 44px,
+    12: 48px,
+    13: 52px,
+    14: 56px,
+    15: 60px,
+);
+
+$primary-theme: #39CDCC !global;
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    @each $breakpoint, $width in $breakpoints {
+        @media (min-width: $width) {
+            max-width: $width;
+        }
+    }
+}
+
+@each $key, $value in $spacing-values {
+    .mt-#{$key} {
+        margin-top: $value;
+    }
+}
+
+@each $key, $value in $spacing-values {
+    .mb-#{$key} {
+        margin-bottom: $value;
+    }
+}
+
+@each $key, $value in $spacing-values {
+    .fs-#{$key} {
+        font-size: $value;
+    }
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.d-block {
+    display: block;
+}
+
+// colors
+.text-primary {
+    color: $primary-theme;
+}
+
+.text-secondary {
+    color: #545F7D;
+}
+
+.bg-primary {
+    background-color: $primary-theme;
+}
+
+// Typography styles ----------------------------------------------------------------
+
+.font-light {
+    font-family: $font-light;
+    font-weight: 300;
+}
+
+.font-regular {
+    font-family: $font-regular;
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-family: $font-semibold;
+    font-weight: 600;
+}
+
+.font-bold {
+    font-family: $font-heavy;
+    font-weight: 700;
+}
+
+.font-heavy {
+    font-family: $font-heavy;
+    font-weight: 900;
+}
+
+// ----------------------------------------------------------------
+
+
+.bold {
+    font-weight: 900;
+}
+
+.semibold {
+    font-weight: 600;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.text-small {
+    font-size: 14px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+// flexbox styles
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-10px {
+    gap: 10px;
+}
