@@ -25,9 +25,16 @@ $spacing-values: (
     13: 52px,
     14: 56px,
     15: 60px,
+    16: 70px,
+    17: 80px,
+    18: 90px,
+    19: 100px,
+    20: 110px,
+    21: 120px,
 );
 
 $primary-theme: #39CDCC !global;
+$secondary-theme: #213F7D;
 
 .container {
     width: 100%;
@@ -41,21 +48,47 @@ $primary-theme: #39CDCC !global;
     }
 }
 
+// mt-[] marging top
 @each $key, $value in $spacing-values {
     .mt-#{$key} {
         margin-top: $value;
     }
 }
 
+// mb-[] margine-bottom
 @each $key, $value in $spacing-values {
     .mb-#{$key} {
         margin-bottom: $value;
     }
 }
 
+// fs-[] font-size
 @each $key, $value in $spacing-values {
     .fs-#{$key} {
         font-size: $value;
+    }
+}
+
+// py-[] padding Y-axis
+@each $key, $value in $spacing-values {
+    .py-#{$key} {
+        padding-bottom: $value;
+        padding-top: $value;
+    }
+}
+
+// px-[] padding X-axis
+@each $key, $value in $spacing-values {
+    .px-#{$key} {
+        padding-left: $value;
+        padding-right: $value;
+    }
+}
+
+// gap-[] gap, can be used in flex box or grid container
+@each $key, $value in $spacing-values {
+    .gap-#{$key} {
+        gap: $value;
     }
 }
 
@@ -73,6 +106,10 @@ $primary-theme: #39CDCC !global;
 }
 
 .text-secondary {
+    color: $secondary-theme;
+}
+
+.text-gray {
     color: #545F7D;
 }
 

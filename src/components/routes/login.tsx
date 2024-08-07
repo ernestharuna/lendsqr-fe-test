@@ -18,7 +18,7 @@ export default function Login() {
           <section className="form-container" id="right-side">
             <form action="#" className="container">
               <h1 className="font-bold mb-0 mt-0">Welcome!</h1>
-              <p className="mb-13 mt-4 fs-5 text-secondary">Enter details to login.</p>
+              <p className="mb-13 mt-4 fs-5 text-gray">Enter details to login.</p>
               <div>
                 <input type="email" className="input-field w-100" placeholder="Email" />
               </div>

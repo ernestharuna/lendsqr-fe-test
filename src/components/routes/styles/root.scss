@@ -1,0 +1,52 @@
+@import "utilities";
+
+#root {
+    nav {
+        border: 1px solid black;
+    }
+
+    .root-app-logo {
+        >*:first-child {
+            position: relative;
+            top: -11px;
+        }
+    }
+
+    .root-search-form {
+        .search-box {
+            box-sizing: border-box;
+            margin: 0;
+            height: 40px;
+            width: 300px;
+            padding: 10px 10px;
+            border-radius: 8px 0 0 8px;
+            border: 1px solid #E5E7EB;
+            position: relative;
+            top: -1px;
+        }
+
+        button {
+            box-sizing: border-box;
+            margin: 0;
+            height: 40px;
+            padding: 10px 20px;
+            border: 0;
+            border-radius: 0 8px 8px 0;
+            background-color: $primary-theme;
+        }
+    }
+
+    .root-avatar-container {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: inline-block;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
