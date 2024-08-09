@@ -70,11 +70,18 @@ const Savings = (props: SVGProps<SVGSVGElement>) => {
 }
 
 const PopDown = (props: SVGProps<SVGSVGElement>) => {
-    return <svg {...props} style={{ position: "relative", top: "5px"}} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    return <svg {...props} style={{ position: "relative", top: "5px" }} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M9.39229 12.0516C9.72823 12.425 10.2751 12.4219 10.6079 12.0516L13.4829 8.857C13.8188 8.48434 13.6852 8.182 13.1845 8.182H6.81567C6.31489 8.182 6.18363 8.48746 6.51723 8.857L9.39229 12.0516Z" fill="#213F7D" />
     </svg>
 }
 
+const TableFilter = (props: SVGProps<SVGSVGElement>) => {
+    return <svg {...props} style={{ position: "relative", top: "4px" }} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.22222 13.3333H9.77778V11.5555H6.22222V13.3333ZM0 2.66666V4.44443H16V2.66666H0ZM2.66667 8.88888H13.3333V7.1111H2.66667V8.88888Z" fill="#545F7D" />
+    </svg>
+
+}
 
 
-export { Bell, Search, Users, Group, File, Savings, PopDown }
+
+export { Bell, Search, Users, Group, File, Savings, PopDown, TableFilter }

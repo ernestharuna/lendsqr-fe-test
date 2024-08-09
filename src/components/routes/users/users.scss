@@ -14,17 +14,29 @@
     }
 }
 
-table {
+.index-users-table {
     border-collapse: collapse;
     width: 100%;
     background: #fff;
+    box-shadow: 0 10px 8px #d1d1d13c;
+    border-radius: 3px;
+    border: 1px solid #f2f3f7;
+
+    th,
+    td {
+        text-align: left;
+        padding: 16px;
+    }
+
+    th {
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #545F7D;
+    }
 }
 
-th,
-td {
-    text-align: left;
-    padding: 16px;
-}
 
 @media screen and (max-width: 800px) {
     .users-card-container {

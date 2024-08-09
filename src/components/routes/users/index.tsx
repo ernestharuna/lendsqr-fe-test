@@ -1,4 +1,4 @@
-import { File, Group, Savings, Users } from "../../../assets/icons/icons";
+import { File, Group, Savings, TableFilter, Users } from "../../../assets/icons/icons";
 import DashboardCard from "../../shared/dashboard-card";
 
 export default function Index() {
@@ -33,28 +33,23 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="container index-users-table mt-12">
-        <table>
+      <section className="container mt-12">
+        <table className="index-users-table">
           <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Points</th>
+            <th>
+              <span className="mr-2">Oranization</span>  <TableFilter /> </th>
+            <th>
+              <span className="mr-2">Username</span> <TableFilter /> </th>
+            <th>
+              <span className="mr-2">Email</span> <TableFilter /> </th>
+            <th>
+              <span className="mr-2">Phone number</span> <TableFilter /> </th>
+            <th>
+              <span className="mr-2">Date joined</span> <TableFilter /> </th>
+            <th>
+              <span className="mr-2">Status</span> <TableFilter /> </th>
           </tr>
-          <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-          </tr>
-          <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>94</td>
-          </tr>
-          <tr>
-            <td>Adam</td>
-            <td>Johnson</td>
-            <td>67</td>
-          </tr>
+         
         </table>
       </section>
     </div>
