@@ -1,16 +1,16 @@
 import axios from "axios";
 
-const axiosClient = axios.create({
-    baseURL: `${import.meta.env.VITE_API_BASE_URL}/api`
+const interceptor = axios.create({
+    // baseURL: `${import.meta.env.VITE_API_BASE_URL}/api`
 });
 
-axiosClient.interceptors.request.use((config) => {
-    // const token = localStorage.getItem('');
-    // config.headers.Authorization = `Bearer ${token}`;
+interceptor.interceptors.request.use((config) => {
+    const token = "6fhw5nzl4y7l1miyxa7ck23bm4sydycstdwqv5gs";
+    config.headers.Authorization = `Bearer ${token}`;
     return config;
 });
 
-axiosClient.interceptors.response.use((response) => {
+interceptor.interceptors.response.use((response) => {
     return response;
 }, (error) => {
     try {
@@ -25,4 +25,4 @@ axiosClient.interceptors.response.use((response) => {
     throw error
 });
 
-export default axiosClient
+export default interceptor

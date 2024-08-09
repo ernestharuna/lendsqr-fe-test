@@ -4,7 +4,7 @@ import Root from "../layouts/root";
 
 // Routes import
 import Dashboard from "./dashboard";
-import Index from "./users";
+import Index, {loader as UserLoader}  from "./users";
 import Login from "./login";
 import User from "./users/user";
 
@@ -24,7 +24,8 @@ const router = createBrowserRouter([
             },
             {
                 path: "users",
-                element: <Index />
+                element: <Index />,
+                loader: UserLoader
             },
             {
                 path: "users/:userId",

@@ -1,8 +1,19 @@
 import { File, Group, Savings, SeeMore, TableFilter, Users } from "../../../assets/icons/icons";
-import { users } from "../../../utils/mockdata";
+// import { users } from "../../../utils/mockdata";
 import DashboardCard from "../../shared/dashboard-card";
+import users from "../../../http/users";
+import { useLoaderData } from "react-router-dom";
+import { formatDate } from "../../../utils/dateFormatter";
+
+export async function loader() {
+  const lenders = await users.get();
+  return { lenders };
+}
 
 export default function Index() {
+  const { lenders }: any = useLoaderData();
+  console.log(lenders);
+
   return (
     <div className="container index-container font-regular">
       <section className="mt-10">
@@ -36,48 +47,52 @@ export default function Index() {
 
       <section className="container mt-10">
         <table className="index-users-table">
-          <tr>
-            <th>
-              <span className="mr-2">Oranization</span>  <TableFilter /> </th>
-            <th>
-              <span className="mr-2">Username</span> <TableFilter /> </th>
-            <th>
-              <span className="mr-2">Email</span> <TableFilter /> </th>
-            <th>
-              <span className="mr-2">Phone number</span> <TableFilter /> </th>
-            <th>
-              <span className="mr-2">Date joined</span> <TableFilter /> </th>
-            <th>
-              <span className="mr-2">Status</span> <TableFilter /> </th>
-            <th>
-              <span className="mr-2"></span> </th>
-          </tr>
+          <thead>
 
-          {users.map((user: any) => (
-            <tr className="index-table-data">
-              <td>
-                {user.organisation}
-              </td>
-              <td>
-                {user.username}
-              </td>
-              <td>
-                {user.email}
-              </td>
-              <td>
-                {user.phone}
-              </td>
-              <td>
-                {user.createdAt}
-              </td>
-              <td>
-                {user.status}
-              </td>
-              <td>
-                {<SeeMore />}
-              </td>
+            <tr>
+              <th>
+                <span className="mr-2">Oranization</span>  <TableFilter /> </th>
+              <th>
+                <span className="mr-2">Username</span> <TableFilter /> </th>
+              <th>
+                <span className="mr-2">Email</span> <TableFilter /> </th>
+              <th>
+                <span className="mr-2">Phone number</span> <TableFilter /> </th>
+              <th>
+                <span className="mr-2">Date joined</span> <TableFilter /> </th>
+              <th>
+                <span className="mr-2">Status</span> <TableFilter /> </th>
+              <th>
+                <span className="mr-2"></span> </th>
             </tr>
-          ))}
+          </thead>
+          <tbody>
+            {lenders.map((user: any) => (
+              <tr className="index-table-data">
+                <td>
+                  {user.organization}
+                </td>
+                <td>
+                  {user.username}
+                </td>
+                <td>
+                  {user.email}
+                </td>
+                <td>
+                  {user.profile.phone}
+                </td>
+                <td>
+                  {formatDate(user.createdAt)}
+                </td>
+                <td>
+                  {user.status}
+                </td>
+                <td>
+                  {<SeeMore />}
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </section>
     </div>
