@@ -2,7 +2,10 @@
 
 #sidebar {
     background-color: #fff;
-    width: 285px;
+    box-shadow: 10px 0 8px #d1d1d122;
+    min-width: 250px;
+    height: 100vh;
+    overflow-y: auto;
 
     .sidebar-section {
         padding: 10px 0 15px;
@@ -29,6 +32,7 @@
             @extend .sidebar-section-menu;
             color: #213F7D;
             background-color: #F3FCFC;
+            padding-left: 12px !important;
             border-left: 4px solid $primary-theme;
         }
 
@@ -42,5 +46,11 @@
             @extend .sidebar-section-menu;
             color: #7A8CB1 !important;
         }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #sidebar {
+        display: none;
     }
 }

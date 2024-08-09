@@ -1,0 +1,33 @@
+@import '../styles/utilities';
+
+.users-card-container {
+    display: flex;
+    align-items: center;
+
+}
+
+.index-container {
+    h3 {
+        color: #213F7D;
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: #fff;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 16px;
+}
+
+@media screen and (max-width: 800px) {
+    .users-card-container {
+        display: block;
+    }
+}

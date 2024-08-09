@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { AppLogo, AppName } from "../../assets/icons/logos";
-import { Bell, Search } from "../../assets/icons/icons";
+import { Bell, PopDown, Search } from "../../assets/icons/icons";
 import userImage from "../../assets/images/user-image.png"
 import Sidebar from "./sidebar";
 
@@ -21,15 +21,15 @@ export default function Root() {
           </section>
 
           <section className="flex items-center gap-12">
-            <a href="#" className="d-block text-secondary">Docs</a>
-            <Bell />
+            <a href="#" className="d-block text-secondary root-docs">Docs</a>
+            <Bell className="root-bell-icon" />
             <div className="flex items-center gap-5">
               <span className="root-avatar-container">
                 <img src={userImage} alt="..." />
               </span>
 
-              <div className="text-secondary">
-                Adedeji
+              <div className="text-secondary root-username">
+                Adedeji <PopDown/>
               </div>
             </div>
           </section>
@@ -39,7 +39,7 @@ export default function Root() {
 
       <div className="flex">
         <Sidebar />
-        <div className="px-7">
+        <div className="px-7 root-outlet">
           <Outlet />
         </div>
       </div>

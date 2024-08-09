@@ -4,6 +4,9 @@
     .root-nav {
         background-color: #fff;
         box-shadow: 5px 10px 8px #d1d1d122;
+        position: sticky;
+        top: 0;
+        z-index: 1;
     }
 
     .root-app-logo {
@@ -49,5 +52,20 @@
             height: 100%;
             object-fit: cover;
         }
+    }
+
+    .root-outlet {
+        max-height: 100vh;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .root-search-form,
+    .root-docs,
+    .root-username,
+    .root-bell-icon {
+        display: none !important;
     }
 }

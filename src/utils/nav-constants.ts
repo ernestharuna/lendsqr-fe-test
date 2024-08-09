@@ -2,6 +2,18 @@ import { AuditAndLogs, DecisionModels, FeesAndCharges, Guarantors, Home, Karma, 
 
 export const navbarItems = [
     {
+        id: 0,
+        description: '',
+        menus: [
+            {
+                id: 0o1,
+                icon: Organisation,
+                description: 'Switch Organization',
+                path: '/switch/organization'
+            }
+        ]
+    },
+    {
         id: 1,
         description: '',
         menus: [

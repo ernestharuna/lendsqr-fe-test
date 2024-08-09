@@ -1,9 +1,61 @@
 @import "components/routes/styles/login.scss";
 @import "components/layouts/styles/root.scss";
 @import "components/layouts/styles/sidebar.scss";
+@import "components/routes/users/users.scss";
 
 body {
   font-family: sans-serif;
   background: #FBFBFB;
   margin: 0;
+}
+
+.dashboard-card {
+  padding: 20px 30px;
+  width: 220px;
+  box-shadow: 0 10px 8px #d1d1d13c;
+  border: 1px solid #F2F3F7;
+  border-radius: 2px;
+  background: #fff;
+  flex: 1;
+
+  .dashboard-card-description {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    color: #545F7D;
+    margin: 15px 0;
+  }
+
+  .dashboard-card-data {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    color: #213F7D;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media screen and (max-width: 800px) {
+  .dashboard-card {
+    width: auto;
+  }
 }
