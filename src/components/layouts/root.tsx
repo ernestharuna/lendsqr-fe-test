@@ -15,7 +15,7 @@ export default function Root() {
               <AppLogo width={20} /> <AppName width={100} />
             </div>
             <form className="root-search-form">
-              <input type="search" id="" className="search-box" placeholder="Search for anything" />
+              <input type="search" id="" className="root-search-box" placeholder="Search for anything" />
               <button type="submit"><Search /></button>
             </form>
           </section>
