@@ -55,6 +55,20 @@ $secondary-theme: #213F7D;
     }
 }
 
+// mr-[] marging right
+@each $key, $value in $spacing-values {
+    .mr-#{$key} {
+        margin-right: $value;
+    }
+}
+
+// ml-[] marging left
+@each $key, $value in $spacing-values {
+    .ml-#{$key} {
+        margin-left: $value;
+    }
+}
+
 // mb-[] margine-bottom
 @each $key, $value in $spacing-values {
     .mb-#{$key} {

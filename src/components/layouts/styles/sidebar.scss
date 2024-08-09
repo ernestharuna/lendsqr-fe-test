@@ -40,7 +40,7 @@
 
         .inactive-menu {
             @extend .sidebar-section-menu;
-            color: #7A8CB1;
+            color: #7A8CB1 !important;
         }
     }
 }

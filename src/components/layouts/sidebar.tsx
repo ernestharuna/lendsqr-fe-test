@@ -11,7 +11,9 @@ export default function Sidebar() {
                             <NavLink to={menu.path} className={({ isActive, isPending }) =>
                                 isActive ? "active-menu" : isPending ? "pending-menu" : "inactive-menu"
                             }>
-                                {menu.description}
+                                <div>
+                                    <menu.icon className='mr-2' /> {menu.description}
+                                </div>
                             </NavLink>
                         ))}
                     </section>
