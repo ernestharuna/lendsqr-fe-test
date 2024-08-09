@@ -1,0 +1,48 @@
+export const users = [
+    {
+        id: 1,
+        organisation: "Lendsqr",
+        username: "Adedeji Pius",
+        email: "ade@gmail.com",
+        phone: "08183670422",
+        createdAt: "May 15, 2020 10:00 AM",
+        status: "active",
+    },
+    {
+        id: 2,
+        organisation: "Lendsqr",
+        username: "John Pius",
+        email: "Johnmary@gmail.com",
+        phone: "08183670422",
+        createdAt: "June 15, 2020 10:00 AM",
+        status: "inactive",
+    },
+    {
+        id: 3,
+        organisation: "Lendsqr",
+        username: "Pius",
+        email: "ade@gmail.com",
+        phone: "08183670422",
+        createdAt: "May 15, 2020 10:00 AM",
+        status: "pending",
+    },
+    {
+        id: 4,
+        organisation: "Lendsqr",
+        username: "Adedeji Pius",
+        email: "ade@gmail.com",
+        phone: "08183670422",
+        createdAt: "May 15, 2020 10:00 AM",
+        status: "active",
+    },
+    {
+        id: 5,
+        organisation: "Lendsqr",
+        username: "Grace Effiom",
+        email: "grace.effiom@gmail.com",
+        phone: "08183670455",
+        createdAt: "August 15, 2020 10:00 AM",
+        status: "blacklisted",
+    },
+
+]

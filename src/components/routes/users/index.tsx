@@ -1,4 +1,5 @@
-import { File, Group, Savings, TableFilter, Users } from "../../../assets/icons/icons";
+import { File, Group, Savings, SeeMore, TableFilter, Users } from "../../../assets/icons/icons";
+import { users } from "../../../utils/mockdata";
 import DashboardCard from "../../shared/dashboard-card";
 
 export default function Index() {
@@ -33,7 +34,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="container mt-12">
+      <section className="container mt-10">
         <table className="index-users-table">
           <tr>
             <th>
@@ -48,8 +49,35 @@ export default function Index() {
               <span className="mr-2">Date joined</span> <TableFilter /> </th>
             <th>
               <span className="mr-2">Status</span> <TableFilter /> </th>
+            <th>
+              <span className="mr-2"></span> </th>
           </tr>
-         
+
+          {users.map((user: any) => (
+            <tr className="index-table-data">
+              <td>
+                {user.organisation}
+              </td>
+              <td>
+                {user.username}
+              </td>
+              <td>
+                {user.email}
+              </td>
+              <td>
+                {user.phone}
+              </td>
+              <td>
+                {user.createdAt}
+              </td>
+              <td>
+                {user.status}
+              </td>
+              <td>
+                {<SeeMore />}
+              </td>
+            </tr>
+          ))}
         </table>
       </section>
     </div>
