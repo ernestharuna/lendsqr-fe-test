@@ -33,8 +33,24 @@
     font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 $font-light: 'AvenirNext', sans-serif;
 $font-regular: 'AvenirNext', sans-serif;
 $font-semibold: 'AvenirNext', sans-serif;
 $font-bold: 'AvenirNext', sans-serif;
 $font-heavy: 'AvenirNext', sans-serif;
+
+.work-sans-regular {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.work-sans-light {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}

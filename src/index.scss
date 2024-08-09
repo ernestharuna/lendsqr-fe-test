@@ -1,7 +1,9 @@
 @import "components/routes/styles/login.scss";
-@import "components/routes/styles/root.scss";
+@import "components/layouts/styles/root.scss";
+@import "components/layouts/styles/sidebar.scss";
 
 body {
   font-family: sans-serif;
+  background: #FBFBFB;
   margin: 0;
 }

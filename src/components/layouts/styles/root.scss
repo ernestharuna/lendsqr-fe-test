@@ -1,8 +1,9 @@
-@import "utilities";
+@import "../../routes/styles/utilities";
 
 #root {
-    nav {
-        // border: 1px solid black;
+    .root-nav {
+        background-color: #fff;
+        box-shadow: 5px 10px 8px #d1d1d122;
     }
 
     .root-app-logo {

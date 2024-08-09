@@ -2,11 +2,12 @@ import { Outlet } from "react-router-dom";
 import { AppLogo, AppName } from "../../assets/icons/logos";
 import { Bell, Search } from "../../assets/icons/icons";
 import userImage from "../../assets/images/user-image.png"
+import Sidebar from "./sidebar";
 
 export default function Root() {
   return (
     <div id="root">
-      <nav>
+      <nav className="root-nav">
         <div className="flex items-center justify-between px-7 py-5">
 
           <section className="flex items-center gap-19">
@@ -24,7 +25,7 @@ export default function Root() {
             <Bell />
             <div className="flex items-center gap-5">
               <span className="root-avatar-container">
-                <img src={userImage} alt="..."  />
+                <img src={userImage} alt="..." />
               </span>
 
               <div className="text-secondary">
@@ -35,7 +36,13 @@ export default function Root() {
 
         </div>
       </nav>
-      <Outlet />
+
+      <div className="flex">
+        <Sidebar />
+        <div className="px-7">
+          <Outlet />
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,0 +1,46 @@
+@import "../../routes/styles/utilities";
+
+#sidebar {
+    background-color: #fff;
+    width: 285px;
+
+    .sidebar-section {
+        padding: 10px 0 15px;
+        // border: 1px solid #f0f0f0;
+
+        .sidebar-section-description {
+            text-transform: uppercase;
+            font-size: 12px;
+            color: #545F7D;
+            font-weight: 500;
+            padding: 0 15px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar-section-menu {
+            display: block !important;
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            text-decoration: none;
+            font-size: 16px
+        }
+
+        .active-menu {
+            @extend .sidebar-section-menu;
+            color: #213F7D;
+            background-color: #F3FCFC;
+            border-left: 4px solid $primary-theme;
+        }
+
+        .pending-menu {
+            @extend .sidebar-section-menu;
+            color: #213F7D;
+            background-color: #F3FCFC;
+        }
+
+        .inactive-menu {
+            @extend .sidebar-section-menu;
+            color: #7A8CB1;
+        }
+    }
+}

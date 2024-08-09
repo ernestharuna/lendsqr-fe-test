@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 // Layout import
 import Root from "../layouts/root";
 
@@ -18,6 +18,10 @@ const router = createBrowserRouter([
         element: <Root />,
         children: [
             { index: true, element: <Dashboard /> },
+            {
+                path: "dashboard",
+                element: <Navigate to="/" />
+            },
             {
                 path: "users",
                 element: <Index />
