@@ -1,4 +1,4 @@
-import { File, Group, Savings, TableFilter, Users } from "../../assets/icons/icons";
+import { File, Group, Savings, Users } from "../../assets/icons/icons";
 import DashboardCard from "../shared/dashboard-card";
 
 export default function Dashboard() {

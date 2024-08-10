@@ -1,0 +1,155 @@
+#user {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    .user-header {
+        margin: 20px 0 40px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .user-blacklist-button {
+            background: none;
+            border: 1px solid red;
+            border-radius: 8px;
+            color: red;
+            font-weight: 600;
+            letter-spacing: 2px;
+            padding: 15px 20px;
+            font-size: 14px;
+        }
+
+        .user-activate-button {
+            background: none;
+            border: 1px solid $primary-theme;
+            border-radius: 8px;
+            color: $primary-theme;
+            font-weight: 600;
+            letter-spacing: 2px;
+            padding: 15px 20px;
+            font-size: 14px;
+        }
+    }
+
+    .user-back {
+        color: #545F7D;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    .user-banner {
+        background-color: #fff;
+        border: 1px solid #F2F3F7;
+        box-shadow: 0 10px 8px #d1d1d13c;
+        border-radius: 2px;
+
+        .user-fullname {
+            color: #213F7D;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .user-profile-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto;
+            overflow: hidden;
+            background: #DBE0EA;
+        }
+
+        .user-index,
+        .user-tier,
+        .user-balance {
+            padding: 20px 35px;
+        }
+
+        .user-tier {
+            border-left: 1px solid #DDDFE5;
+            border-right: 1px solid #DDDFE5;
+            .tier {
+                color: #545F7D;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+
+        .user-balance {
+            .user-bank {
+                font-size: 12px;
+            }
+        }
+
+
+        .user-profile-nav {
+            padding: 0 35px;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+
+            div {
+                flex: 1;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .active {
+                color: $primary-theme;
+                border-bottom: 2px solid $primary-theme;
+            }
+        }
+    }
+
+    .gray {
+        color: #545F7D;
+    }
+
+    .blue {
+        color: #213F7D;
+    }
+
+    .user-misc-info {
+        background-color: #fff;
+        border-bottom: 1px solid #DDDFE5;
+        box-shadow: 0 10px 8px #d1d1d13c;
+        border-radius: 2px;
+
+        .user-misc-grid {
+            display: grid;
+            gap: 40px 100px;
+            grid-template-columns: auto auto auto auto auto;
+        }
+
+        .user-misc-container {
+            padding: 40px 0;
+            margin: 0 30px;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #DDDFE5;
+            }
+
+            .user-misc-header {
+                color: #213F7D;
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+
+            .user-misc-detail {
+                .user-misc-title {
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #545F7D;
+                }
+
+                .user-misc-data {
+                    color: #545F7D;
+                    font-size: 16px;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                }
+
+            }
+        }
+    }
+}

@@ -4,9 +4,9 @@ import Root from "../layouts/root";
 
 // Routes import
 import Dashboard from "./dashboard";
-import Index, { loader as UserLoader } from "./users";
+import Index, { loader as RootLoader } from "./users";
 import Login from "./login";
-import User from "./users/user";
+import User, { loader as UserLoader } from "./users/user";
 import ErrorPage from "../shared/error-page";
 
 const router = createBrowserRouter([
@@ -31,11 +31,12 @@ const router = createBrowserRouter([
                     {
                         path: "users",
                         element: <Index />,
-                        loader: UserLoader
+                        loader: RootLoader
                     },
                     {
                         path: "users/:userId",
-                        element: <User />
+                        element: <User />,
+                        loader: UserLoader
                     },
                 ]
             }

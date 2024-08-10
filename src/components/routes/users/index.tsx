@@ -8,7 +8,7 @@ import Pagination from "../../shared/pagination";
 import { useState } from "react";
 
 export async function loader() {
-  const lenders = await users.get();
+  const lenders = await users.getUsers();
   return { lenders }
 }
 
@@ -47,12 +47,12 @@ export default function Index() {
           <DashboardCard
             Icon={File}
             description="Users with loans"
-            data="2,453"
+            data="12,453"
           />
           <DashboardCard
             Icon={Savings}
             description="Users savings"
-            data="2,453"
+            data="102,453"
           />
         </div>
       </section>
