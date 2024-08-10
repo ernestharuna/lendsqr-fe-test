@@ -3,7 +3,7 @@ import DashboardCard from "../shared/dashboard-card";
 
 export default function Dashboard() {
   return (
-    <div className="container dashboard-container font-regular">
+    <div className="dashboard-container font-regular">
       <section className="mt-10">
         <h3 className="mt-12 mb-10">
           Dashboard

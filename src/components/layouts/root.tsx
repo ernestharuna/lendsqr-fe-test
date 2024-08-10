@@ -11,7 +11,7 @@ export default function Root() {
       <nav className="root-nav">
         <div className="flex items-center justify-between px-7 py-5">
 
-          <section className="flex items-center gap-19">
+          <section className="flex items-center gap-21">
             <div className="root-app-logo">
               <AppLogo width={20} /> <AppName width={100} />
             </div>
@@ -41,7 +41,7 @@ export default function Root() {
       <div className="flex">
         <Sidebar />
         <div className={
-          navigation.state === "loading" ? "loading px-7 root-outlet" : "px-7 root-outlet"
+          navigation.state === "loading" ? "loading px-15 root-outlet" : "px-15 root-outlet"
         }>
           <Outlet />
         </div>
