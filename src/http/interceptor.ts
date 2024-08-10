@@ -1,11 +1,10 @@
 import axios from "axios";
+import { env } from "../utils";
 
-const interceptor = axios.create({
-    // baseURL: `${import.meta.env.VITE_API_BASE_URL}/api`
-});
+const interceptor = axios.create();
 
 interceptor.interceptors.request.use((config) => {
-    const token = "6fhw5nzl4y7l1miyxa7ck23bm4sydycstdwqv5gs";
+    const token = env.VITE_API_KEY;
     config.headers.Authorization = `Bearer ${token}`;
     return config;
 });
@@ -17,6 +16,7 @@ interceptor.interceptors.response.use((response) => {
         const { response } = error;
         if (response.status === 401) {
             alert('Unauthorized');
+            window.location.href = '/login';
         }
     } catch (error) {
         console.log(error);

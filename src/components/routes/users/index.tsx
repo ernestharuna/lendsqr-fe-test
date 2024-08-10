@@ -1,5 +1,4 @@
 import { File, Group, Savings, SeeMore, TableFilter, Users } from "../../../assets/icons/icons";
-// import { users } from "../../../utils/mockdata";
 import DashboardCard from "../../shared/dashboard-card";
 import users from "../../../http/users";
 import { useLoaderData } from "react-router-dom";
