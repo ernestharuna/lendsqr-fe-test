@@ -103,7 +103,7 @@ export default function Index() {
                     <div style={{ cursor: "pointer" }} className="index-table-dropdown">
                       {<SeeMore className="index-table-actions" />}
                       <div className="index-table-action-content">
-                        <Link to="#">
+                        <Link to={user.id}>
                           <Eye className="mr-2" />  View Details
                         </Link>
                         <Link to="#">

@@ -134,28 +134,28 @@ $secondary-theme: #213F7D;
 // Typography styles ----------------------------------------------------------------
 
 .font-light {
-    font-family: $font-light;
-    font-weight: 300;
+    font-family: $avenir-font;
+    font-weight: 300 !important;
 }
 
 .font-regular {
-    font-family: $font-regular;
-    font-weight: 500;
+    font-family: $avenir-font;
+    font-weight: 500 !important;
 }
 
 .font-semibold {
-    font-family: $font-semibold;
-    font-weight: 600;
+    font-family: $avenir-font;
+    font-weight: 600 !important;
 }
 
 .font-bold {
-    font-family: $font-heavy;
-    font-weight: 700;
+    font-family: $avenir-font;
+    font-weight: 700 !important;
 }
 
 .font-heavy {
-    font-family: $font-heavy;
-    font-weight: 900;
+    font-family: $avenir-font;
+    font-weight: 900 !important;
 }
 
 // ----------------------------------------------------------------
