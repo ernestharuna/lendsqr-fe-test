@@ -16,7 +16,7 @@ export default function Index() {
   console.log(lenders);
 
   return (
-    <div className="container index-container font-regular">
+    <div className="index-container font-regular">
       <section className="mt-10">
         <h3 className="mt-12 mb-10">
           Users
@@ -46,7 +46,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="container mt-10">
+      <section className="mt-10">
         <table className="index-users-table">
           <thead>
 
