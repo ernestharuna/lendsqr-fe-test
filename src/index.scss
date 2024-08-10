@@ -63,6 +63,22 @@ body {
   color: #545F7D;
 }
 
+#pagination {
+  .pagination-detail {
+    color: #545F7D;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  
+  .pagination-count {
+    span {
+      display: inline-block;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+  }
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 5px;

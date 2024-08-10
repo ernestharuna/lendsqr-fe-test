@@ -5,6 +5,7 @@ import users from "../../../http/users";
 import { useLoaderData } from "react-router-dom";
 import { formatDate } from "../../../utils/dateFormatter";
 import UserStatus from "../../shared/user-status";
+import Pagination from "../../shared/pagination";
 
 export async function loader() {
   const lenders = await users.get();
@@ -95,6 +96,8 @@ export default function Index() {
             ))}
           </tbody>
         </table>
+
+        <Pagination />
       </section>
     </div>
   )
