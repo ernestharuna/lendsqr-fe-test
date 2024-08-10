@@ -58,54 +58,55 @@ export default function Index() {
       </section>
 
       <section className="mt-10">
-        <table className="index-users-table">
-          <thead>
-
-            <tr>
-              <th>
-                <span className="mr-2">Oranization</span>  <TableFilter /> </th>
-              <th>
-                <span className="mr-2">Username</span> <TableFilter /> </th>
-              <th>
-                <span className="mr-2">Email</span> <TableFilter /> </th>
-              <th>
-                <span className="mr-2">Phone number</span> <TableFilter /> </th>
-              <th>
-                <span className="mr-2">Date joined</span> <TableFilter /> </th>
-              <th>
-                <span className="mr-2">Status</span> <TableFilter /> </th>
-              <th>
-                <span className="mr-2"></span> </th>
-            </tr>
-          </thead>
-          <tbody>
-            {tableData.map((user: any) => (
-              <tr className="index-table-data" key={user.id}>
-                <td>
-                  {user.organization}
-                </td>
-                <td>
-                  {user.username}
-                </td>
-                <td>
-                  {user.email}
-                </td>
-                <td>
-                  {user.profile.phone}
-                </td>
-                <td>
-                  {formatDate(user.createdAt)}
-                </td>
-                <td>
-                  <UserStatus status={user.status} />
-                </td>
-                <td>
-                  {<SeeMore />}
-                </td>
+        <div className="index-table-container px-5">
+          <table className="index-users-table">
+            <thead>
+              <tr>
+                <th>
+                  <span className="mr-2">Oranization</span>  <TableFilter /> </th>
+                <th>
+                  <span className="mr-2">Username</span> <TableFilter /> </th>
+                <th>
+                  <span className="mr-2">Email</span> <TableFilter /> </th>
+                <th>
+                  <span className="mr-2">Phone number</span> <TableFilter /> </th>
+                <th>
+                  <span className="mr-2">Date joined</span> <TableFilter /> </th>
+                <th>
+                  <span className="mr-2">Status</span> <TableFilter /> </th>
+                <th>
+                  <span className="mr-2"></span> </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {tableData.map((user: any) => (
+                <tr className="index-table-data" key={user.id}>
+                  <td>
+                    {user.organization}
+                  </td>
+                  <td>
+                    {user.username}
+                  </td>
+                  <td>
+                    {user.email}
+                  </td>
+                  <td>
+                    {user.profile.phone}
+                  </td>
+                  <td>
+                    {formatDate(user.createdAt)}
+                  </td>
+                  <td>
+                    <UserStatus status={user.status} />
+                  </td>
+                  <td>
+                    {<SeeMore />}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <Pagination size={pageSize} data={lenders} page={page} paginate={paginate} />
       </section>

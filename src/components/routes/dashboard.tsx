@@ -23,12 +23,12 @@ export default function Dashboard() {
           <DashboardCard
             Icon={File}
             description="Users with loans"
-            data="2,453"
+            data="12,453"
           />
           <DashboardCard
             Icon={Savings}
             description="Users savings"
-            data="2,453"
+            data="102,453"
           />
         </div>
       </section>

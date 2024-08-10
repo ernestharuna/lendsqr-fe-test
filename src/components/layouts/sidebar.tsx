@@ -4,7 +4,6 @@ import { DropDown } from '../../assets/icons/sidebar'
 export default function Sidebar() {
     return (
         <aside id="sidebar">
-
             <nav className='sidebar-nav'>
                 {navbarItems.map((section) => (
                     <section key={section.id} className='sidebar-section work-sans-regular'>

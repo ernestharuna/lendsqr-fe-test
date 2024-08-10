@@ -14,18 +14,22 @@
     }
 }
 
-.index-users-table {
-    border-collapse: collapse;
-    width: 100%;
+.index-table-container {
     background: #fff;
+    padding: 0 20px 10px;
     box-shadow: 0 10px 8px #d1d1d13c;
     border-radius: 3px;
     border: 1px solid #f2f3f7;
+}
+
+.index-users-table {
+    border-collapse: collapse;
+    width: 100%;
 
     th,
     td {
         text-align: left;
-        padding: 16px;
+        padding: 16px 0;
     }
 
     th {
@@ -36,10 +40,13 @@
         color: #545F7D;
     }
 
-    td {
+    tr {
         color: #545F7D;
         font-size: 14px;
         font-weight: 400;
+    }
+
+    tr:not(:last-child) {
         border-bottom: 1px solid #E9ECF2;
     }
 }

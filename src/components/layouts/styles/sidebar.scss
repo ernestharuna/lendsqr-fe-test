@@ -6,6 +6,8 @@
     min-width: 280px;
     height: 100vh;
     overflow-y: auto;
+    position: sticky;
+    top: 0px;
 
     .sidebar-section {
         padding: 10px 0 15px;
