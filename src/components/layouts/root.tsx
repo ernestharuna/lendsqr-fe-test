@@ -1,10 +1,11 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigation } from "react-router-dom";
 import { AppLogo, AppName } from "../../assets/icons/logos";
 import { Bell, PopDown, Search } from "../../assets/icons/icons";
 import userImage from "../../assets/images/user-image.png"
 import Sidebar from "./sidebar";
 
 export default function Root() {
+  const navigation = useNavigation();
   return (
     <div id="root">
       <nav className="root-nav">
@@ -29,7 +30,7 @@ export default function Root() {
               </span>
 
               <div className="text-secondary root-username">
-                Adedeji <PopDown/>
+                Adedeji <PopDown />
               </div>
             </div>
           </section>
@@ -39,10 +40,12 @@ export default function Root() {
 
       <div className="flex">
         <Sidebar />
-        <div className="px-7 root-outlet">
+        <div className={
+          navigation.state === "loading" ? "loading px-7 root-outlet" : "px-7 root-outlet"
+        }>
           <Outlet />
         </div>
       </div>
-    </div>
+    </div >
   )
 }

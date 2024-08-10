@@ -35,6 +35,34 @@ body {
   }
 }
 
+.user-status {
+  padding: 7px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.active-status {
+  background-color: #F3FCF6;
+  color: #39CD62
+}
+
+.pending-status {
+  background-color: #FDF7E5;
+  color: #E9B200;
+}
+
+.blacklist-status {
+  background-color: #FCE6EB;
+  color: #E4033B;
+}
+
+.inactive-status {
+  background-color: #F9F9F9;
+  color: #545F7D;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 5px;

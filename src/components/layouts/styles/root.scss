@@ -1,6 +1,12 @@
 @import "../../routes/styles/utilities";
 
 #root {
+    .loading {
+        opacity: 0.25;
+        transition: opacity 200ms;
+        transition-delay: 200ms;
+    }
+
     .root-nav {
         background-color: #fff;
         box-shadow: 5px 10px 8px #d1d1d122;

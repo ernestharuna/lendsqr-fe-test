@@ -4,10 +4,11 @@ import DashboardCard from "../../shared/dashboard-card";
 import users from "../../../http/users";
 import { useLoaderData } from "react-router-dom";
 import { formatDate } from "../../../utils/dateFormatter";
+import UserStatus from "../../shared/user-status";
 
 export async function loader() {
   const lenders = await users.get();
-  return { lenders };
+  return { lenders }
 }
 
 export default function Index() {
@@ -85,7 +86,7 @@ export default function Index() {
                   {formatDate(user.createdAt)}
                 </td>
                 <td>
-                  {user.status}
+                  <UserStatus status={user.status} />
                 </td>
                 <td>
                   {<SeeMore />}
