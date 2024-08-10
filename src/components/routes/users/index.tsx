@@ -1,7 +1,7 @@
-import { File, Group, Savings, SeeMore, TableFilter, Users } from "../../../assets/icons/icons";
+import { Eye, File, Group, Savings, SeeMore, TableFilter, UserApprove, UserCancel, Users } from "../../../assets/icons/icons";
 import DashboardCard from "../../shared/dashboard-card";
 import users from "../../../http/users";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { formatDate } from "../../../utils/dateFormatter";
 import UserStatus from "../../shared/user-status";
 import Pagination from "../../shared/pagination";
@@ -100,7 +100,20 @@ export default function Index() {
                     <UserStatus status={user.status} />
                   </td>
                   <td>
-                    {<SeeMore />}
+                    <div style={{ cursor: "pointer" }} className="index-table-dropdown">
+                      {<SeeMore className="index-table-actions" />}
+                      <div className="index-table-action-content">
+                        <Link to="#">
+                          <Eye className="mr-2" />  View Details
+                        </Link>
+                        <Link to="#">
+                          <UserCancel className="mr-2" /> Blacklist User
+                        </Link>
+                        <Link to="#">
+                          <UserApprove className="mr-2" /> Activate User
+                        </Link>
+                      </div>
+                    </div>
                   </td>
                 </tr>
               ))}
