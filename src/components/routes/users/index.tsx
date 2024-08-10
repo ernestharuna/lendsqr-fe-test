@@ -16,7 +16,7 @@ export default function Index() {
   const { lenders }: any = useLoaderData();
 
   const [page, setPage] = useState(1);
-  const pageSize = 15;
+  const [pageSize, setPageSize] = useState(100);
 
   const indexOfLastRecord = page * pageSize;
   const indexOfFirstRecord = indexOfLastRecord - pageSize;
@@ -121,7 +121,13 @@ export default function Index() {
           </table>
         </div>
 
-        <Pagination size={pageSize} data={lenders} page={page} paginate={paginate} />
+        <Pagination
+          size={pageSize}
+          data={lenders}
+          page={page}
+          paginate={paginate}
+          handlePageSizeChange={setPageSize}
+        />
       </section>
     </div>
   )

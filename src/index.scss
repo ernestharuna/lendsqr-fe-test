@@ -74,14 +74,23 @@ body {
   .pagination-detail {
     color: #545F7D;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 14px; 
 
-    .pagination-size {
+    .pagination-size-wrapper {
       background: #E5E8EE;
       border-radius: 4px;
+    }
+
+    .pagination-size {
+      background: transparent;
       margin: 0 10px;
       font-weight: 600;
       color: #213F7D;
+      border: none;
+      padding-right: 10px;
+      &:focus {
+        outline: 0;
+      }
     }
   }
 
