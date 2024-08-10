@@ -27,7 +27,7 @@ export default function Index() {
   };
 
   return (
-    <div className="index-container font-regular">
+    <div className="index-container work-sans">
       <section className="mt-10">
         <h3 className="mt-12 mb-10">
           Users

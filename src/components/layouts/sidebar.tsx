@@ -6,7 +6,7 @@ export default function Sidebar() {
         <aside id="sidebar">
             <nav className='sidebar-nav'>
                 {navbarItems.map((section) => (
-                    <section key={section.id} className='sidebar-section work-sans-regular'>
+                    <section key={section.id} className='sidebar-section work-sans'>
                         <div className='sidebar-section-description'>{section.description}</div>
                         {section.menus.map((menu) => (
                             <NavLink
