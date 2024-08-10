@@ -68,13 +68,27 @@ body {
     color: #545F7D;
     font-weight: 400;
     font-size: 14px;
+
+    .pagination-size {
+      background: #E5E8EE;
+      border-radius: 4px;
+      margin: 0 10px;
+      font-weight: 600;
+      color: #213F7D;
+    }
   }
-  
+
   .pagination-count {
-    span {
+    a {
       display: inline-block;
       margin: 0 15px;
       font-size: 14px;
+      color: #979DAF;
+      text-decoration: none;
+    }
+
+    .active {
+      color: #545F7D !important;
     }
   }
 }

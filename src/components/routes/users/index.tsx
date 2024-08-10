@@ -5,6 +5,7 @@ import { useLoaderData } from "react-router-dom";
 import { formatDate } from "../../../utils/dateFormatter";
 import UserStatus from "../../shared/user-status";
 import Pagination from "../../shared/pagination";
+import { useState } from "react";
 
 export async function loader() {
   const lenders = await users.get();
@@ -13,7 +14,17 @@ export async function loader() {
 
 export default function Index() {
   const { lenders }: any = useLoaderData();
-  console.log(lenders);
+
+  const [page, setPage] = useState(1);
+  const pageSize = 7;
+
+  const indexOfLastRecord = page * pageSize;
+  const indexOfFirstRecord = indexOfLastRecord - pageSize;
+  const tableData = lenders.slice(indexOfFirstRecord, indexOfLastRecord);
+
+  function paginate(pageNumber: number) {
+    setPage(pageNumber)
+  };
 
   return (
     <div className="index-container font-regular">
@@ -68,8 +79,8 @@ export default function Index() {
             </tr>
           </thead>
           <tbody>
-            {lenders.map((user: any) => (
-              <tr className="index-table-data">
+            {tableData.map((user: any) => (
+              <tr className="index-table-data" key={user.id}>
                 <td>
                   {user.organization}
                 </td>
@@ -96,7 +107,7 @@ export default function Index() {
           </tbody>
         </table>
 
-        <Pagination />
+        <Pagination size={pageSize} data={lenders} page={page} paginate={paginate} />
       </section>
     </div>
   )
