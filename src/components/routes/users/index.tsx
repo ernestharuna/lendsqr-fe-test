@@ -16,7 +16,7 @@ export default function Index() {
   const { lenders }: any = useLoaderData();
 
   const [page, setPage] = useState(1);
-  const pageSize = 7;
+  const pageSize = 15;
 
   const indexOfLastRecord = page * pageSize;
   const indexOfFirstRecord = indexOfLastRecord - pageSize;

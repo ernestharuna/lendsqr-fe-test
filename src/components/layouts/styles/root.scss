@@ -67,7 +67,10 @@
 
     .root-outlet {
         max-height: 100vh;
+        position: sticky;
         width: 100%;
+        overflow-y: auto;
+        top: 0px;
     }
 }
 

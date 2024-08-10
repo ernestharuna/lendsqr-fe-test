@@ -64,6 +64,12 @@ body {
 }
 
 #pagination {
+  position: sticky;
+  bottom: 0;
+  background: #FBFBFB;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
   .pagination-detail {
     color: #545F7D;
     font-weight: 400;
@@ -95,7 +101,7 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0;
 }
 
 /* Track */
