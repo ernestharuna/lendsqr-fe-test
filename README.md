@@ -27,7 +27,7 @@ Steps to get your project up and running locally:
 
 ## Configuration
 Configure environment variables with API endpoint and API Key
-1. VITE_API-BASE - https://...(your URL)
+1. VITE_API_BASE - https://...(your URL)
 2. VITE_API_KEY - `If your end point requeires an API key`
 
 ## Styling | Components
