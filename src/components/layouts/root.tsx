@@ -41,7 +41,7 @@ export default function Root() {
       <div className="flex">
         <Sidebar />
         <div className={
-          navigation.state === "loading" ? "loading px-15 root-outlet" : "px-15 root-outlet"
+          navigation.state === "loading" ? "loading root-outlet" : "root-outlet"
         }>
           <Outlet />
         </div>

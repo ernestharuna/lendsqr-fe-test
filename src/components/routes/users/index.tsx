@@ -62,7 +62,7 @@ export default function Index() {
           <table className="index-users-table">
             <thead>
               <tr>
-                <th>
+                <th className="desktop-only">
                   <span className="mr-2">Oranization</span>
                   <span className="index-table-filter">
                     <TableFilter className="index-table-filter-btn" />
@@ -90,7 +90,7 @@ export default function Index() {
                     </div>
                   </span>
                 </th>
-                <th>
+                <th className="desktop-only">
                   <span className="mr-2">Email</span>
                   <span className="index-table-filter">
                     <TableFilter className="index-table-filter-btn" />
@@ -104,7 +104,7 @@ export default function Index() {
                     </div>
                   </span>
                 </th>
-                <th>
+                <th className="desktop-only">
                   <span className="mr-2">Phone number</span>
                   <span className="index-table-filter">
                     <TableFilter className="index-table-filter-btn" />
@@ -118,7 +118,7 @@ export default function Index() {
                     </div>
                   </span>
                 </th>
-                <th>
+                <th className="desktop-only">
                   <span className="mr-2">Date joined</span>
                   <span className="index-table-filter">
                     <TableFilter className="index-table-filter-btn" />
@@ -159,19 +159,19 @@ export default function Index() {
             <tbody>
               {tableData.map((user: any) => (
                 <tr className="index-table-data" key={user.id}>
-                  <td>
+                  <td className="desktop-only">
                     {user.organization}
                   </td>
                   <td>
                     {user.username}
                   </td>
-                  <td>
+                  <td className="desktop-only">
                     {user.email}
                   </td>
-                  <td>
+                  <td className="desktop-only">
                     {user.profile.phone}
                   </td>
-                  <td>
+                  <td className="desktop-only">
                     {formatDate(user.createdAt)}
                   </td>
                   <td>
