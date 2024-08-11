@@ -34,6 +34,7 @@ Configure environment variables with API endpoint and API Key
 - Reusable components have their styles located in ./index.scss
 
 ## App Structure
+Here is a tour of the most important folders found in the *./src* director that may be of concern to the developer :)
 - Assets: Holds images, fonts, and SVG icons used all through the app
 - Components: All visual components of the app reside here — this includes all shared components, pages, and layouts.
 - HTTP: An instance of Axios and an interceptor can be found in the *interceptor.ts*. A class for fetching users is found within this folder. This allows for cleaner components and confines data fetching to this component.
