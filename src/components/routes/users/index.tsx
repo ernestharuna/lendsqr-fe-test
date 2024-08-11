@@ -63,17 +63,95 @@ export default function Index() {
             <thead>
               <tr>
                 <th>
-                  <span className="mr-2">Oranization</span>  <TableFilter /> </th>
+                  <span className="mr-2">Oranization</span>
+                  <span className="index-table-filter">
+                    <TableFilter className="index-table-filter-btn" />
+                    <div className="index-table-filter-content">
+                      <label htmlFor="organization">Organization</label>
+                      <input type="text" placeholder="Select" id="organization"/>
+                      <div className="flex items-center gap-3 mt-7 mb-3">
+                        <button className="reset-btn">Reset</button>
+                        <button className="filter-btn">Filter</button>
+                      </div>
+                    </div>
+                  </span>
+                </th>
                 <th>
-                  <span className="mr-2">Username</span> <TableFilter /> </th>
+                  <span className="mr-2">Username</span>
+                  <span className="index-table-filter">
+                    <TableFilter className="index-table-filter-btn" />
+                    <div className="index-table-filter-content">
+                      <label>Username</label>
+                      <input type="text" placeholder="User" />
+                      <div className="flex items-center gap-3 mt-7 mb-3">
+                        <button className="reset-btn">Reset</button>
+                        <button className="filter-btn">Filter</button>
+                      </div>
+                    </div>
+                  </span>
+                </th>
                 <th>
-                  <span className="mr-2">Email</span> <TableFilter /> </th>
+                  <span className="mr-2">Email</span>
+                  <span className="index-table-filter">
+                    <TableFilter className="index-table-filter-btn" />
+                    <div className="index-table-filter-content">
+                      <label>Email</label>
+                      <input type="text" placeholder="Email" />
+                      <div className="flex items-center gap-3 mt-7 mb-3">
+                        <button className="reset-btn">Reset</button>
+                        <button className="filter-btn">Filter</button>
+                      </div>
+                    </div>
+                  </span>
+                </th>
                 <th>
-                  <span className="mr-2">Phone number</span> <TableFilter /> </th>
+                  <span className="mr-2">Phone number</span>
+                  <span className="index-table-filter">
+                    <TableFilter className="index-table-filter-btn" />
+                    <div className="index-table-filter-content">
+                      <label>Phone Number</label>
+                      <input type="text" placeholder="Phone Number" />
+                      <div className="flex items-center gap-3 mt-7 mb-3">
+                        <button className="reset-btn">Reset</button>
+                        <button className="filter-btn">Filter</button>
+                      </div>
+                    </div>
+                  </span>
+                </th>
                 <th>
-                  <span className="mr-2">Date joined</span> <TableFilter /> </th>
+                  <span className="mr-2">Date joined</span>
+                  <span className="index-table-filter">
+                    <TableFilter className="index-table-filter-btn" />
+                    <div className="index-table-filter-content">
+                      <label>Date</label>
+                      <input type="date" placeholder="Date" />
+                      <div className="flex items-center gap-3 mt-7 mb-3">
+                        <button className="reset-btn">Reset</button>
+                        <button className="filter-btn">Filter</button>
+                      </div>
+                    </div>
+                  </span>
+                </th>
                 <th>
-                  <span className="mr-2">Status</span> <TableFilter /> </th>
+                  <span className="mr-2">Status</span>
+                  <span className="index-table-filter">
+                    <TableFilter className="index-table-filter-btn" />
+                    <div className="index-table-filter-content">
+                      <label htmlFor="status">Status</label>
+                      <select id="status">
+                        <option value="">lendsqr</option>
+                        <option value="">Blacklisted</option>
+                        <option value="">Active</option>
+                        <option value="">Pending</option>
+                        <option value="">Inactive</option>
+                      </select>
+                      <div className="flex items-center gap-3 mt-7 mb-3">
+                        <button className="reset-btn">Reset</button>
+                        <button className="filter-btn">Filter</button>
+                      </div>
+                    </div>
+                  </span>
+                </th>
                 <th>
                   <span className="mr-2"></span> </th>
               </tr>

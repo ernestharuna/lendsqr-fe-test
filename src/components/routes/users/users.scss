@@ -33,6 +33,90 @@
         background-color: #fff;
         top: 0;
         padding-bottom: 10px;
+
+        .index-table-filter {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+
+            &:hover .index-table-filter-content {
+                display: block;
+            }
+
+            .index-table-filter-content {
+                display: none;
+                position: absolute;
+                transform: translateX(-50%);
+                // right: 50%;
+                background-color: #fff;
+                box-shadow: 0 10px 8px #d1d1d13c;
+                border: 1px solid #E7E9ED;
+                padding: 10px 15px;
+                border-radius: 3px;
+                min-width: 160px;
+                z-index: 2;
+
+                label {
+                    text-transform: capitalize;
+                    font-size: 14px;
+                    font-weight: 500;
+                    display: block;
+                    margin-bottom: 6px;
+                }
+
+                input,
+                select {
+                    padding: 0 16px;
+                    height: 40px;
+                    min-width: 200px;
+                    border-radius: 8px;
+                    border: 1px solid #D3D9E5;
+                    box-sizing: border-box;
+                    // color: #535E7C;
+                    display: block;
+                    font-size: 14px;
+                    font-weight: 500;
+
+                    &:hover {
+                        background-color: #f4f5f6;
+                    }
+
+                    &:focus {
+                        outline: 1px solid $primary-theme
+                    }
+                }
+
+                button {
+                    flex: 1;
+                    font-size: 14px;
+                    font-weight: 600;
+                    border-radius: 8px;
+                    padding: 10px 16px;
+                    cursor: pointer;
+                }
+
+                .reset-btn {
+                    border: 1px solid #545F7D;
+                    background: none;
+                    color: #545F7D;
+
+                    &:hover {
+                        background-color: #545F7D;
+                        color: #fff;
+                    }
+                }
+
+                .filter-btn {
+                    border: 1px solid $primary-theme;
+                    background: $primary-theme;
+                    color: #fff;
+
+                    &:hover {
+                        background-color: #535E7C;
+                    }
+                }
+            }
+        }
     }
 
     th,
