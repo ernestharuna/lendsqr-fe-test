@@ -22,7 +22,7 @@ export default function Pagination({ size = 50, data, page = 1, paginate, handle
     }
 
     return (
-        <section className='flex items-center justify-between mt-5' id='pagination'>
+        <section className='mt-5' id='pagination'>
             <div className='pagination-detail flex items-center gap-3'>
                 Showing {" "}
                 <div className="pagination-size-wrapper">

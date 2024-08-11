@@ -70,11 +70,14 @@ body {
   background: #FBFBFB;
   padding-top: 15px;
   padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   .pagination-detail {
     color: #545F7D;
     font-weight: 400;
-    font-size: 14px; 
+    font-size: 14px;
 
     .pagination-size-wrapper {
       background: #E5E8EE;
@@ -88,6 +91,7 @@ body {
       color: #213F7D;
       border: none;
       padding-right: 10px;
+
       &:focus {
         outline: 0;
       }
@@ -129,8 +133,16 @@ body {
   background: #555;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .dashboard-card {
     width: auto;
+  }
+
+  #pagination {
+    display: block;
+
+    .pagination-count {
+      margin-top: 10px;
+    }
   }
 }
