@@ -1,15 +1,26 @@
 @import "utilities";
 
 #login-page {
-    height: 100dvh;
+    // border: 2px solid red;
 
     header {
-        padding: 4rem 0 5rem;
+        padding: 4rem 8rem;
+        position: absolute;
     }
 
-    #left-side {
-        width: 100%;
-        height: 100%;
+    .login-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .login-image-container {
+        width: max-content;
+        height: auto;
+        flex: 1;
+        margin: 0 auto;
+        text-align: center;
+
+        .login-image {}
     }
 
     .icons {
@@ -25,7 +36,12 @@
 
     .form-container {
         width: 100%;
-        height: 100%;
+        height: 100dvh;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
 
         h1 {
             font-size: 3rem;
@@ -34,26 +50,67 @@
         }
 
         form {
-            padding: 0 4rem;
-            width: 70%;
-            margin: 0 auto 0;
+            padding: 0 7rem;
+            width: 60%;
 
-            input {
+            .input-field {
                 box-sizing: border-box;
                 border: 2px solid #E5E7EB;
                 padding: 20px 15px;
                 margin-bottom: 1rem;
                 border-radius: 5px;
-                // font-size: 18px;
+                box-sizing: border-box;
+                width: 100%;
                 font-size: 14px;
 
                 &:focus {
                     outline: 2px solid #39CDCC;
                     border: 2px solid #fff;
                 }
+
+                &::placeholder {
+                    color: #989FB1;
+                }
             }
 
-            button {
+            .login-password-field-wrapper {
+                position: relative;
+                width: 100%;
+
+                .login-password-field {
+                    padding: 20px 15px;
+                    font-size: 14px;
+                    border: 2px solid #E5E7EB;
+                    width: 100%;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+
+                    &:focus {
+                        outline: 2px solid #39CDCC;
+                        border: 2px solid #fff;
+                    }
+
+                    &::placeholder {
+                        color: #989FB1;
+                    }
+                }
+
+                .login-password-visibility {
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                    font-size: 12px;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    color: $primary-theme;
+                }
+            }
+
+            .login-submit {
                 box-sizing: border-box;
                 padding: 20px 15px;
                 margin-bottom: 1rem;
@@ -73,34 +130,103 @@
     }
 }
 
-@media screen and (max-width: 800px) {
-    #left-image {
+@media screen and (max-width: 900px) {
+    .login-image-container {
         display: none;
     }
 
-    #login-page {
-        header {
-            padding: 4rem 0 5rem;
+    .login-wrapper {
+        display: block;
+    }
+
+    .form-container {
+        width: 100%;
+        height: auto;
+        background: #fff;
+        display: block;
+
+        h1 {
+            font-size: 3rem;
+            color: #213F7D;
+            letter-spacing: -2px;
         }
 
-        .icons {
-            display: flex;
-            gap: 10px;
-            align-items: center;
+        form {
+            padding: 0 2rem;
+            width: auto;
 
-            >*:first-child {
-                position: relative;
-                top: -2px;
+            .input-field {
+                box-sizing: border-box;
+                border: 2px solid #E5E7EB;
+                padding: 20px 15px;
+                margin-bottom: 1rem;
+                border-radius: 5px;
+                box-sizing: border-box;
+                width: 100%;
+                font-size: 14px;
+
+                &:focus {
+                    outline: 2px solid #39CDCC;
+                    border: 2px solid #fff;
+                }
+
+                &::placeholder {
+                    color: #989FB1;
+                }
             }
-        }
 
-        main .form-container {
-            width: 100%;
+            .login-password-field-wrapper {
+                position: relative;
+                width: 100%;
 
-            h1 {
-                font-size: 2.5rem;
-                color: #213F7D;
-                letter-spacing: -2px;
+                .login-password-field {
+                    padding: 20px 15px;
+                    font-size: 14px;
+                    border: 2px solid #E5E7EB;
+                    width: 100%;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+
+                    &:focus {
+                        outline: 2px solid #39CDCC;
+                        border: 2px solid #fff;
+                    }
+
+                    &::placeholder {
+                        color: #989FB1;
+                    }
+                }
+
+                .login-password-visibility {
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                    font-size: 12px;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    color: $primary-theme;
+                }
+            }
+
+            .login-submit {
+                box-sizing: border-box;
+                padding: 20px 15px;
+                margin-bottom: 1rem;
+                border-radius: 8px;
+                border: 0;
+                color: #fff;
+                letter-spacing: 2px;
+                font-size: 14px;
+                cursor: pointer;
+                background-color: #39CDCC;
+
+                &:hover {
+                    background-color: #29A3A3;
+                }
             }
         }
     }
