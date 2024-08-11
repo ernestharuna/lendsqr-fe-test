@@ -1,24 +1,17 @@
 # Lendsqr Frontend Test (Ernest Haruna)
 
-A brief description of what your project does, why it was created, and its main features.
-
 ## Table of Contents
-
-1. [Getting Started](#getting-started)
+1. [Prerequisites](#prerequisites)
 2. [Features](#features)
 3. [Installation](#installation)
 4. [Configurations](#configurations)
 5. [Styling | Components](#stylings-components)
-
-## Getting Started
-Provide a brief introduction to help people get started with your project.
 
 ## Prerequisites
 - [Node.js](https://nodejs.org/) (v20+)
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
 ## Installation
-Steps to get your project up and running locally:
 1. Clone the repository:
    ```sh
    git clone https://github.com/ernestharuna/lendsqr-fe-test.git
